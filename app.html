@@ -10,13 +10,27 @@
     <script type="text/javascript">
       function _message(){
 //         alert(location.hash);
-        window.postMessage(location.hash,'https://taketsu.github.io/app.html');
+//         window.postMessage(location.hash,'https://taketsu.github.io/app.html');
       }
     </script>
   </head>
   <body onLoad="javascript: _message();">
     postMessage Test    
+    <button type="button">
+      Send message to React Native
+    </button>
   </body>
-
+  <script>
+//     var messagesReceivedFromReactNative = 0;
+//     document.addEventListener('message', function(e) {
+//       messagesReceivedFromReactNative += 1;
+//       document.getElementsByTagName('p')[0].innerHTML =
+//         'Messages received from React Native: ' + messagesReceivedFromReactNative;
+//       document.getElementsByTagName('p')[1].innerHTML = e.data;
+//     });
+    document.getElementsByTagName('button')[0].addEventListener('click', function() {
+      window.postMessage(location.hash);
+    });
+  </script>
 </html>
   
