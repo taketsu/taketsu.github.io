@@ -8,9 +8,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script type="text/javascript">
+      function _message(){
+        alert(loation.search);
+        window.postMessage('OK','https://taketsu.github.io/app.html');
+      }
     </script>
   </head>
-  <body onLoad="javascript: window.postMessage('OK','https://taketsu.github.io/app.html');">
+  <body onLoad="javascript: _message();">
     postMessage Test    
   </body>
 
