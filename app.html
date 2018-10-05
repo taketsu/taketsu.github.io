@@ -7,33 +7,26 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script type="text/javascript">
-//       function _message(){
-//         alert(location.hash);
-//         window.postMessage(location.hash);
-//       }
-    </script>
   </head>
   <body>
-<!--     postMessage Test     -->
-<!--     <button type="button">
-      Send message to React Native
-    </button> -->
   </body>
   <script>
-//     var messagesReceivedFromReactNative = 0;
-//     document.addEventListener('message', function(e) {
-//       messagesReceivedFromReactNative += 1;
-//       document.getElementsByTagName('p')[0].innerHTML =
-//         'Messages received from React Native: ' + messagesReceivedFromReactNative;
-//       document.getElementsByTagName('p')[1].innerHTML = e.data;
-//     });
-//     document.getElementsByTagName('button')[0].addEventListener('click', function() {
-//       window.postMessage(location.hash);
-//     });
-      setTimeout(function(){
-        window.postMessage(location.hash);
-      }, 1*1000);
+    // URLのパラメータを取得
+    var hash = location.hash.substring(1);
+    var token = '';
+    // URLにパラメータが存在する場合
+    if(hash) {
+      var param = hash.split('&');
+      var paramArray = [];
+      for (i = 0; i < param.length; i++) {
+        var paramItem = param[i].split('=');
+        paramArray[paramItem[0]] = paramItem[1];
+      }
+      token = paramArray.access_token
+    }
+    setTimeout(function(){
+      window.postMessage(token);
+    }, 1*1000);
   </script>
 </html>
   
