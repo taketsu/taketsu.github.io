@@ -8,13 +8,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script type="text/javascript">
-      function _message(){
+//       function _message(){
 //         alert(location.hash);
 //         window.postMessage(location.hash);
-      }
+//       }
     </script>
   </head>
-  <body onLoad="javascript: _message();">
+  <body>
 <!--     postMessage Test     -->
 <!--     <button type="button">
       Send message to React Native
@@ -29,8 +29,11 @@
 //       document.getElementsByTagName('p')[1].innerHTML = e.data;
 //     });
 //     document.getElementsByTagName('button')[0].addEventListener('click', function() {
-      window.postMessage(location.hash);
+//       window.postMessage(location.hash);
 //     });
+      setTimeout(function(){
+        window.postMessage(location.hash);
+      }, 1*1000);
   </script>
 </html>
   
