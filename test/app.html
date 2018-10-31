@@ -21,7 +21,8 @@
         paramArray[paramItem[0]] = paramItem[1];
       }
       token = paramArray.access_token;
-      alert(paramArray);
+      alert(paramArray.access_token);
+      alert(paramArray.refresh_token);
     }
     setTimeout(function(){
       window.postMessage(token);

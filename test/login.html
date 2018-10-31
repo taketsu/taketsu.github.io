@@ -33,7 +33,7 @@
     </a>
     <script type="text/javascript">
         document.getElementById('LoginWithAmazon').onclick = function() {
-        options = { scope: 'profile', popup: false };
+        options = { scope: 'profile', popup: false, response_type: 'code' };
         amazon.Login.authorize(options,
             'https://taketsu.github.io/test/app.html');
         return false;
