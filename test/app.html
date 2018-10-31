@@ -20,12 +20,10 @@
         var paramItem = param[i].split('=');
         paramArray[paramItem[0]] = paramItem[1];
       }
-      token = paramArray.access_token;
-      alert(paramArray.access_token);
-      alert(paramArray.refresh_token);
+      code = paramArray.code;
     }
     setTimeout(function(){
-      window.postMessage(token);
+      window.postMessage(code);
     }, 1*1000);
   </script>
 </html>
